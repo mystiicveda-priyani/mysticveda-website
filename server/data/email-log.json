@@ -1,0 +1,83 @@
+[
+  {
+    "userId": "user-1777122160755",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "Welcome to MysticVeda Holistic Studio",
+    "sentAt": "2026-04-25T13:02:41.262Z",
+    "meetingLink": "",
+    "type": "welcome",
+    "template": "welcome-email",
+    "recipientName": "Priyanka Pungaonkar",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777122198204-880",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Custom Session (6 services)",
+    "sentAt": "2026-04-25T13:03:18.212Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777122198204-880",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777122965652-35",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Custom Session (2 services)",
+    "sentAt": "2026-04-25T13:16:05.655Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777122965652-35",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777125993476-26",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Energy Healing Session",
+    "sentAt": "2026-04-25T14:06:33.488Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777125993476-26",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777127713332-902",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Energy Healing Session",
+    "sentAt": "2026-04-25T14:35:13.340Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777127713332-902",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777128848008-48",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Energy Healing Session",
+    "sentAt": "2026-04-25T14:54:08.017Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777128848008-48",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777129309264-887",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Energy Healing Session",
+    "sentAt": "2026-04-25T15:01:49.268Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777129309264-887",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "logged-fallback"
+  },
+  {
+    "appointmentId": "mv-1777129978249-181",
+    "to": "priyanka.pungaonkar95@gmail.com",
+    "subject": "MysticVeda Booking Confirmed: Tarot Reading",
+    "sentAt": "2026-04-25T15:12:58.259Z",
+    "meetingLink": "https://meet.mysticveda.com/session/mv-1777129978249-181",
+    "type": "live-session",
+    "template": "booking-confirmation",
+    "delivery": "smtp"
+  }
+]
