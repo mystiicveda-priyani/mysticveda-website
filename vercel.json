@@ -6,14 +6,14 @@
     "NODE_ENV": "production"
   },
   "functions": {
-    "server/src/index.js": {
+    "api/index.js": {
       "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/server/src/index.js"
+      "destination": "/api/$1"
     }
   ]
 }
