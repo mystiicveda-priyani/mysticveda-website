@@ -6,7 +6,7 @@ import { createAppointmentStore } from "./utils/appointmentStore.js";
 
 dotenv.config();
 
-const port = process.env.SERVER_PORT || 5000;
+const port = process.env.PORT || process.env.SERVER_PORT || 5000;
 const useMongo = await connectDatabase();
 const store = createAppointmentStore(useMongo);
 const availabilityStore = createAvailabilityStore();

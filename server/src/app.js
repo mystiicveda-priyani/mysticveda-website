@@ -1,10 +1,14 @@
 import cors from "cors";
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 import { createAppointmentsController } from "./controllers/appointmentsController.js";
 import { createAvailabilityRouter } from "./routes/availabilityRoutes.js";
 import { createEmailRouter } from "./routes/emailRoutes.js";
 import servicesRoutes from "./routes/servicesRoutes.js";
 import { createAppointmentsRouter } from "./routes/appointmentsRoutes.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function getAllowedOrigins() {
   const configuredOrigins = (process.env.CLIENT_ORIGIN ||
@@ -34,6 +38,9 @@ export function createApp(store, availabilityStore) {
     })
   );
   app.use(express.json());
+  
+  // Serve static files from the public directory (built React app)
+  app.use(express.static(path.join(__dirname, "../../public")));
 
   app.get("/api/health", (_request, response) => {
     response.json({ status: "ok" });
