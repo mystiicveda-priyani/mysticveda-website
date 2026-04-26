@@ -19,7 +19,7 @@ export const testimonials = [
 export const studioHighlights = [
   "Private one-to-one energy sessions",
   "Heart-led spiritual guidance",
-  "Warm, premium digital experience"
+  "A safe, sacred space for healing and clarity"
 ];
 
 export const timeSlots = [

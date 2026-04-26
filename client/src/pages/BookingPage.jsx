@@ -327,7 +327,7 @@ function BookingPage() {
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="+91 9637513736"
+                  placeholder="+91 9075137505"
                 />
               </label>
               <label>

@@ -294,3 +294,178 @@
 [1] 
 [1] Node.js v24.14.1
 [1] Failed running 'src/index.js'. Waiting for file changes before restarting...
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] node:events:486
+[1]       throw er; // Unhandled 'error' event
+[1]       ^
+[1] 
+[1] Error: listen EADDRINUSE: address already in use :::5000
+[1]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[1]     at listenInCluster (node:net:2005:12)
+[1]     at Server.listen (node:net:2110:7)
+[1]     at app.listen (D:\priyanka\MysticVeda\projects\mysticveda-website\node_modules\express\lib\application.js:635:24)
+[1]     at file:///D:/priyanka/MysticVeda/projects/mysticveda-website/server/src/index.js:15:5
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[1] Emitted 'error' event on Server instance at:
+[1]     at emitErrorNT (node:net:1984:8)
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[1]   code: 'EADDRINUSE',
+[1]   errno: -4091,
+[1]   syscall: 'listen',
+[1]   address: '::',
+[1]   port: 5000
+[1] }
+[1] 
+[1] Node.js v24.14.1
+[1] Failed running 'src/index.js'. Waiting for file changes before restarting...
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] node:events:486
+[1]       throw er; // Unhandled 'error' event
+[1]       ^
+[1] 
+[1] Error: listen EADDRINUSE: address already in use :::5000
+[1]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[1]     at listenInCluster (node:net:2005:12)
+[1]     at Server.listen (node:net:2110:7)
+[1]     at app.listen (D:\priyanka\MysticVeda\projects\mysticveda-website\node_modules\express\lib\application.js:635:24)
+[1]     at file:///D:/priyanka/MysticVeda/projects/mysticveda-website/server/src/index.js:15:5
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[1] Emitted 'error' event on Server instance at:
+[1]     at emitErrorNT (node:net:1984:8)
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[1]   code: 'EADDRINUSE',
+[1]   errno: -4091,
+[1]   syscall: 'listen',
+[1]   address: '::',
+[1]   port: 5000
+[1] }
+[1] 
+[1] Node.js v24.14.1
+[1] Failed running 'src/index.js'. Waiting for file changes before restarting...
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] Failed running 'src/index.js'. Waiting for file changes before restarting...
+[1] node:events:486
+[1]       throw er; // Unhandled 'error' event
+[1]       ^
+[1] 
+[1] Error: listen EADDRINUSE: address already in use :::5000
+[1]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[1]     at listenInCluster (node:net:2005:12)
+[1]     at Server.listen (node:net:2110:7)
+[1]     at app.listen (D:\priyanka\MysticVeda\projects\mysticveda-website\node_modules\express\lib\application.js:635:24)
+[1]     at file:///D:/priyanka/MysticVeda/projects/mysticveda-website/server/src/index.js:15:5
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[1] Emitted 'error' event on Server instance at:
+[1]     at emitErrorNT (node:net:1984:8)
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[1]   code: 'EADDRINUSE',
+[1]   errno: -4091,
+[1]   syscall: 'listen',
+[1]   address: '::',
+[1]   port: 5000
+[1] }
+[1] 
+[1] Node.js v24.14.1
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] MysticVeda API running on http://localhost:5000
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] node:events:486
+[1]       throw er; // Unhandled 'error' event
+[1]       ^
+[1] 
+[1] Error: listen EADDRINUSE: address already in use :::5000
+[1]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[1]     at listenInCluster (node:net:2005:12)
+[1]     at Server.listen (node:net:2110:7)
+[1]     at app.listen (D:\priyanka\MysticVeda\projects\mysticveda-website\node_modules\express\lib\application.js:635:24)
+[1]     at file:///D:/priyanka/MysticVeda/projects/mysticveda-website/server/src/index.js:15:5
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[1] Emitted 'error' event on Server instance at:
+[1]     at emitErrorNT (node:net:1984:8)
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[1]   code: 'EADDRINUSE',
+[1]   errno: -4091,
+[1]   syscall: 'listen',
+[1]   address: '::',
+[1]   port: 5000
+[1] }
+[1] 
+[1] Node.js v24.14.1
+[1] Failed running 'src/index.js'. Waiting for file changes before restarting...
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] node:events:486
+[1]       throw er; // Unhandled 'error' event
+[1]       ^
+[1] 
+[1] Error: listen EADDRINUSE: address already in use :::5000
+[1]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[1]     at listenInCluster (node:net:2005:12)
+[1]     at Server.listen (node:net:2110:7)
+[1]     at app.listen (D:\priyanka\MysticVeda\projects\mysticveda-website\node_modules\express\lib\application.js:635:24)
+[1]     at file:///D:/priyanka/MysticVeda/projects/mysticveda-website/server/src/index.js:15:5
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[1] Emitted 'error' event on Server instance at:
+[1]     at emitErrorNT (node:net:1984:8)
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[1]   code: 'EADDRINUSE',
+[1]   errno: -4091,
+[1]   syscall: 'listen',
+[1]   address: '::',
+[1]   port: 5000
+[1] }
+[1] 
+[1] Node.js v24.14.1
+[1] Failed running 'src/index.js'. Waiting for file changes before restarting...
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] Waiting for graceful termination...
+[1] Gracefully restarted 'src/index.js'
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] MysticVeda API running on http://localhost:5000
+[1] Restarting 'src/index.js'
+[1] MONGODB_URI is not configured. Falling back to local JSON storage.
+[1] node:events:486
+[1]       throw er; // Unhandled 'error' event
+[1]       ^
+[1] 
+[1] Error: listen EADDRINUSE: address already in use :::5000
+[1]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[1]     at listenInCluster (node:net:2005:12)
+[1]     at Server.listen (node:net:2110:7)
+[1]     at app.listen (D:\priyanka\MysticVeda\projects\mysticveda-website\node_modules\express\lib\application.js:635:24)
+[1]     at file:///D:/priyanka/MysticVeda/projects/mysticveda-website/server/src/index.js:15:5
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[1] Emitted 'error' event on Server instance at:
+[1]     at emitErrorNT (node:net:1984:8)
+[1]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[1]   code: 'EADDRINUSE',
+[1]   errno: -4091,
+[1]   syscall: 'listen',
+[1]   address: '::',
+[1]   port: 5000
+[1] }
+[1] 
+[1] Node.js v24.14.1
+[1] Failed running 'src/index.js'. Waiting for file changes before restarting...

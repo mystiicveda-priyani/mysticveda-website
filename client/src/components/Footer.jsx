@@ -33,7 +33,7 @@ function Footer() {
         </div>
         <div className="space-y-1 text-left md:text-right">
           <p>MysticVeda@outlook.com</p>
-          <p>+91 9637513736</p>
+          <p>+91 9075137505</p>
           <p>Virtual sessions worldwide</p>
         </div>
       </div>

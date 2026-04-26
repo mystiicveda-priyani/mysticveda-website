@@ -21,7 +21,7 @@ function HomePage() {
           <p className="mb-4 inline-flex rounded-full border border-mystic-gold/30 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
             Energy Wellness Experience
           </p>
-          <h1 className="font-display text-5xl font-semibold leading-tight text-mystic-plum md:text-7xl">
+          <h1 className="font-display text-5xl font-semibold leading-tight text-mystic-plum md:text-5xl">
             MysticVeda Holistic Studio
           </h1>
           <p className="mt-3 text-sm font-medium tracking-wide text-mystic-gold">
@@ -179,7 +179,7 @@ function HomePage() {
       <section className="section-shell py-16">
         <SectionHeading
           eyebrow="Services"
-          title="What I Offer"
+          title="What We Offer"
           description="Choose from healing, intuitive guidance, chakra work, and manifestation support."
         />
 
@@ -263,7 +263,7 @@ function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
                 WhatsApp
               </p>
-              <p className="mt-3 text-sm text-mystic-plum">+91 9637513736</p>
+              <p className="mt-3 text-sm text-mystic-plum">+91 9075137505</p>
             </div>
             <div className="rounded-[24px] bg-white/70 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
