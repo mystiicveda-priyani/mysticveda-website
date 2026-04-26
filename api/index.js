@@ -25,6 +25,9 @@ async function initializeApp() {
 }
 
 export default async (req, res) => {
+  // Vercel rewrites /api/* to this handler, but the Express app expects /api prefix
+  // So we need to prepend /api to the URL for proper routing
+  req.url = `/api${req.url}`;
   const application = await initializeApp();
   application(req, res);
 };
