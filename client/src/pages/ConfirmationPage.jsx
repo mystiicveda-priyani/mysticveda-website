@@ -117,7 +117,7 @@ function ConfirmationPage() {
                       </p>
                     </div>
                     <p className="text-sm font-semibold text-mystic-plum">
-                      ${item.lineTotal}
+                      {item.lineTotal}
                     </p>
                   </div>
                 ))}

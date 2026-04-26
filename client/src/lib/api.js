@@ -41,7 +41,7 @@ export const api = {
           id: "tarot-reading",
           name: "Tarot Reading",
           type: "live",
-          duration: "45 min",
+          duration: "60 min",
           description:
             "Receive intuitive card guidance for relationships, purpose, clarity, and aligned next steps."
         },
@@ -49,7 +49,7 @@ export const api = {
           id: "chakra-balancing",
           name: "Chakra Balancing",
           type: "live",
-          duration: "60 min",
+          duration: "40 min",
           description:
             "A restorative chakra alignment session to support flow, grounding, and emotional balance."
         },

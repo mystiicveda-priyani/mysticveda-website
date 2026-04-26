@@ -100,7 +100,7 @@ function CustomSessionPage() {
                   </div>
                   <div className="flex min-w-[160px] flex-col items-start gap-3 sm:items-end">
                     <div className="rounded-full bg-mystic-plum px-4 py-2 text-sm font-semibold text-white">
-                      ${service.price}
+                      {service.price}
                     </div>
                     <div className="flex items-center gap-2 rounded-full border border-mystic-plum/10 bg-white/90 px-3 py-2">
                       <button
@@ -166,7 +166,7 @@ function CustomSessionPage() {
                         </p>
                       </div>
                       <p className="text-sm font-semibold text-mystic-plum">
-                        ${item.lineTotal}
+                        {item.lineTotal}
                       </p>
                     </div>
                   </div>
@@ -178,7 +178,7 @@ function CustomSessionPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-white/70">
                 Total
               </p>
-              <p className="mt-2 font-display text-4xl">${totalPrice}</p>
+              <p className="mt-2 font-display text-4xl">{totalPrice}</p>
             </div>
 
             {error && selectedItems.length > 0 ? (

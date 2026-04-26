@@ -179,7 +179,7 @@ function ProfilePage() {
                       Total
                     </p>
                     <p className="mt-2 text-sm font-semibold text-mystic-plum">
-                      ${appointment.servicePrice}
+                      {appointment.servicePrice}
                     </p>
                   </div>
                   <div className="rounded-[24px] bg-white/75 p-5">
@@ -220,7 +220,7 @@ function ProfilePage() {
                             </p>
                           </div>
                           <p className="text-sm font-semibold text-mystic-plum">
-                            ${item.lineTotal}
+                            {item.lineTotal}
                           </p>
                         </div>
                       ))}

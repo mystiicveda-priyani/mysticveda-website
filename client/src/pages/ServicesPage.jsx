@@ -27,8 +27,8 @@ function ServicesPage() {
     <section className="section-shell py-16 md:py-20">
       <SectionHeading
         eyebrow="Services"
-        title="Choose the experience that meets you where you are"
-        description="All sessions are intentionally paced, warmly guided, and designed to support clarity and energetic balance."
+        title="Find the experience that resonates with your current phase"
+        description="All sessions are mindfully designed, intuitively guided, and focused on bringing clarity, calm, and energetic realignment."
       />
 
       {loading ? (

@@ -11,9 +11,6 @@ function ServiceCard({ service }) {
             {service.name}
           </h3>
         </div>
-        <div className="rounded-full bg-mystic-plum px-4 py-2 text-sm font-semibold text-white shadow-md">
-          ${service.price}
-        </div>
       </div>
 
       <p className="flex-1 text-sm leading-7 text-mystic-plum/75">

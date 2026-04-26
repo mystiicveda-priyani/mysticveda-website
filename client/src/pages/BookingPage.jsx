@@ -259,7 +259,7 @@ function BookingPage() {
                     </p>
                   </div>
                   <p className="text-sm font-semibold text-mystic-plum">
-                    ${item.lineTotal}
+                    {item.lineTotal}
                   </p>
                 </div>
               </div>
@@ -279,7 +279,7 @@ function BookingPage() {
                 Total
               </p>
               <p className="mt-2 text-lg font-semibold text-mystic-plum">
-                ${totalAmount}
+                {totalAmount}
               </p>
             </div>
           </div>
