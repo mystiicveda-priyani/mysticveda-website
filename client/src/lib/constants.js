@@ -5,7 +5,7 @@ export const testimonials = [
       "MysticVeda helped me feel grounded again. The session felt personal, calming, and deeply restorative."
   },
   {
-    name: "Ankeeta Salagare",
+    name: "Ankeetaa Salagare",
     quote:
       "I received clear, intuitive guidance along with practical insights that helped me move forward with confidence and direction."
   },

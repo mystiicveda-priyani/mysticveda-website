@@ -188,7 +188,7 @@ function HomePage() {
             {
               icon: "",
               title: "Astrology Guidance",
-              text: "Understand your life path, strengths, and challenges through personalized chart insights."
+              text: "Discover your unique cosmic blueprint and receive practical insights to navigate your life's journey with greater awareness and confidence."
             },
             {
               icon: "",
