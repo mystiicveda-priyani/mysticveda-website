@@ -2,7 +2,7 @@ function SectionHeading({ eyebrow, title, description, align = "center" }) {
   const alignment = align === "left" ? "text-left" : "text-center";
 
   return (
-    <div className={`mx-auto max-w-2xl ${alignment}`}>
+    <div className={`mx-auto max-w-3xl ${alignment}`}>
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.4em] text-mystic-gold">
         {eyebrow}
       </p>

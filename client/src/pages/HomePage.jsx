@@ -233,7 +233,7 @@ function HomePage() {
       <section className="section-shell py-16">
         <SectionHeading
           eyebrow="Testimonials"
-          title="Clients leave feeling lighter, clearer, and supported"
+          title="Clients gain clarity, emotional ease, and a sense of support."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {testimonials.map((item) => (

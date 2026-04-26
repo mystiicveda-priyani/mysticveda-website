@@ -5,9 +5,9 @@ export const testimonials = [
       "MysticVeda helped me feel grounded again. The session felt personal, calming, and deeply restorative."
   },
   {
-    name: "Ankeeta Rohan",
+    name: "Ankeeta Salagare",
     quote:
-      "The tarot reading was intuitive and clear. I walked away with practical insight and a renewed sense of direction."
+      "I received clear, intuitive guidance along with practical insights that helped me move forward with confidence and direction."
   },
   {
     name: "Pradnya Chavan",
