@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import ServicesPage from "./pages/ServicesPage";
+import NumerologyPage from "./pages/NumerologyPage";
 import SignupPage from "./pages/SignupPage";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/numerology" element={<NumerologyPage />} />
           <Route
             path="/custom-session"
             element={

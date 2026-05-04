@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import BrandLogo from "./BrandLogo";
 import { useAuth } from "../context/AuthContext";
 
@@ -7,6 +7,7 @@ function Navbar() {
   const navLinks = [
     { label: "Home", to: "/" },
     { label: "Services", to: "/services" },
+    { label: "Numerology", to: "/numerology" },
     ...(isUser ? [{ label: "My Bookings", to: "/profile" }] : []),
     ...(isAdmin ? [{ label: "Admin", to: "/admin" }] : [])
   ];
@@ -41,9 +42,6 @@ function Navbar() {
                 {user?.name}
               </div>
             ) : null}
-            <Link to="/services" className="primary-button">
-              Explore Services
-            </Link>
             {isAdmin || isUser ? (
               <button
                 type="button"
