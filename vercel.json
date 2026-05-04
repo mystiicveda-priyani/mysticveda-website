@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm ci && npm run build",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
   "outputDirectory": "public",
   "env": {
     "NODE_ENV": "production"
@@ -8,7 +9,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/$1"
+      "destination": "/api/index"
     }
   ]
 }
