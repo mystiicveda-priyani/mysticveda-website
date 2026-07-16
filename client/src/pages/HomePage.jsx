@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import FAQAccordion from "../components/FAQAccordion";
 import SEO from "../components/SEO";
 import SectionHeading from "../components/SectionHeading";
-import TestimonialCard from "../components/TestimonialCard";
-import { studioHighlights, testimonials } from "../lib/constants";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
+import { studioHighlights } from "../lib/constants";
 
 function HomePage() {
   const socialLinks = [
@@ -26,34 +27,30 @@ function HomePage() {
       <section className="section-shell grid gap-12 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
         <div className="animate-fade-up">
           <p className="mb-4 inline-flex rounded-full border border-mystic-gold/30 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
-            Energy Wellness Experience
+            Holistic support for modern life
           </p>
-          <h1 className="font-display text-5xl font-semibold leading-tight text-mystic-plum md:text-5xl">
-            MysticVeda Holistic Studio
+          <h1 className="font-display text-5xl font-semibold leading-tight text-mystic-plum md:text-6xl">
+            Gentle guidance for clarity, healing, and aligned decisions.
           </h1>
           <p className="mt-3 text-sm font-medium tracking-wide text-mystic-gold">
-            Astrology Guidance · Numerology Readings · Tarot Readings · YPV Healing
+            Tarot Guidance · YPV Energy Healing · Counselling Psychology
           </p>
           <p className="mt-5 max-w-xl text-lg leading-8 text-mystic-plum/75">
-            Heal Your Energy, Transform Your Life. Step into a calming digital
-            sanctuary for intuitive sessions, clarity, and soulful support.
+            Experience calm, private, one-to-one sessions designed to help you feel supported, understood, and more connected to your next step.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link to="/services" className="primary-button">
-              Explore Services
+              Book Your Session
             </Link>
-            <a href="#about" className="secondary-button">
-              Explore the Studio
-            </a>
+            <Link to="/about" className="secondary-button">
+              Learn More
+            </Link>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {studioHighlights.map((highlight) => (
-              <div
-                key={highlight}
-                className="glass-panel rounded-[24px] p-4 text-sm font-medium text-mystic-plum shadow-card"
-              >
+              <div key={highlight} className="glass-panel rounded-[24px] p-4 text-sm font-medium text-mystic-plum shadow-card">
                 {highlight}
               </div>
             ))}
@@ -66,28 +63,48 @@ function HomePage() {
             <div className="rounded-[28px] bg-gradient-to-br from-mystic-plum via-mystic-iris to-[#F4E4B9] p-[1px]">
               <div className="rounded-[28px] bg-white/90 p-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.45em] text-mystic-gold">
-                  Signature Ritual
+                  Why clients choose MysticVeda
                 </p>
                 <h2 className="mt-4 font-display text-4xl text-mystic-plum">
-                  Guided Energy Alignment
+                  Calm, private, and deeply personal support
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-mystic-plum/75">
-                  A serene, one-to-one journey designed to restore balance,
-                  support emotional clarity, and help you reconnect with your
-                  inner wisdom.
+                  Every session is created with intention, warmth, and respect for your emotional, spiritual, and personal journey.
                 </p>
                 <div className="mt-6 rounded-[24px] bg-mystic-lilac/60 p-5">
-                  <p className="text-sm font-semibold text-mystic-plum">
-                    Includes
-                  </p>
+                  <p className="text-sm font-semibold text-mystic-plum">Includes</p>
                   <ul className="mt-3 space-y-2 text-sm text-mystic-plum/70">
-                    <li>Intentional opening ritual</li>
-                    <li>Energy reading and intuitive guidance</li>
-                    <li>Personalized next-step recommendations</li>
+                    <li>Thoughtful preparation before the session</li>
+                    <li>Gentle guidance throughout the experience</li>
+                    <li>Practical next-step support after the session</li>
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell py-16">
+        <div className="rounded-[36px] border border-mystic-plum/10 bg-white/70 p-8 shadow-card md:p-10">
+          <SectionHeading
+            eyebrow="Why Choose MysticVeda"
+            title="A safer, calmer path to clarity and support"
+            description="The studio combines professional care, compassionate presence, and personalised guidance to help you feel grounded and understood."
+          />
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {[
+              "Personalized One-to-One Sessions",
+              "Confidential & Compassionate Support",
+              "Online Sessions Worldwide",
+              "Professional & Ethical Practice",
+              "Personalized Guidance",
+              "A Premium, Calm Client Experience"
+            ].map((item) => (
+              <div key={item} className="rounded-[24px] border border-mystic-plum/10 bg-white/80 p-5 text-sm font-semibold text-mystic-plum">
+                ✓ {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -186,31 +203,26 @@ function HomePage() {
       <section className="section-shell py-16">
         <SectionHeading
           eyebrow="Services"
-          title="What We Offer"
-          description="Choose from healing, intuitive guidance, chakra work, and manifestation support."
+          title="Three core services, each designed with care"
+          description="Choose the support that feels most aligned for you right now, whether you are seeking insight, emotional support, or energetic healing."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
-              icon: "",
-              title: "Astrology Guidance",
-              text: "Discover your unique cosmic blueprint and receive practical insights to navigate your life's journey with greater awareness and confidence."
+              icon: "☾",
+              title: "Tarot Guidance",
+              text: "Gain clear, intuitive insight for relationships, career decisions, life direction, and emotional clarity."
             },
             {
-              icon: "",
-              title: "Numerology Readings",
-              text: "Decode the hidden patterns in your numbers and align with your true purpose."
+              icon: "✦",
+              title: "YPV Energy Healing",
+              text: "Experience a restorative healing session created to support emotional release, inner balance, and energetic calm."
             },
             {
-              icon: "",
-              title: "Tarot Readings",
-              text: "Gain clarity on love, career, and life decisions through intuitive tarot guidance."
-            },
-            {
-              icon: "",
-              title: "YPV Healing (Yog Prana Vidya Healing)",
-              text: "Release emotional blocks, restore energy balance, and experience deep inner healing."
+              icon: "✿",
+              title: "Counselling Psychology",
+              text: "Receive compassionate support for emotional well-being, reflective processing, and grounded personal growth."
             }
           ].map((item) => (
             <article
@@ -232,32 +244,36 @@ function HomePage() {
 
         <div className="mt-10 flex justify-center">
           <Link to="/services" className="primary-button">
-            View All Services
+            Book Your Session
           </Link>
         </div>
       </section>
 
       <section className="section-shell py-16">
-        <SectionHeading
-          eyebrow="Testimonials"
-          title="Clients gain clarity, emotional ease, and a sense of support."
-        />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {testimonials.map((item) => (
-            <TestimonialCard key={item.name} item={item} />
-          ))}
-        </div>
+        <TestimonialsCarousel />
       </section>
 
-      <section id="contact" className="section-shell py-16">
-        <div className="glass-panel rounded-[32px] p-8 shadow-aura md:p-12">
-          <SectionHeading
-            eyebrow="Contact"
-            title="Ready to begin your healing journey?"
-            description="Reach out for questions, private guidance, or to reserve your preferred time."
-            align="left"
-          />
-          <div className="mt-8 grid gap-6 md:grid-cols-4">
+      <section className="section-shell py-16">
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="glass-panel rounded-[32px] p-8 shadow-card md:p-10">
+            <SectionHeading
+              eyebrow="FAQ"
+              title="Questions before you begin?"
+              description="A few answers to help you feel informed and comfortable before booking."
+              align="left"
+            />
+            <div className="mt-8">
+              <FAQAccordion />
+            </div>
+          </div>
+          <div className="glass-panel rounded-[32px] p-8 shadow-aura md:p-10">
+            <SectionHeading
+              eyebrow="Contact"
+              title="Ready to begin your healing journey?"
+              description="Reach out for questions, private guidance, or to reserve your preferred time."
+              align="left"
+            />
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div className="rounded-[24px] bg-white/70 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
                 Email
@@ -280,23 +296,32 @@ function HomePage() {
                 Online sessions from 10:00 AM to 6:00 PM
               </p>
             </div>
-            <div className="rounded-[24px] bg-white/70 p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
-                Follow MysticVeda
-              </p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full border border-mystic-plum/10 bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-mystic-plum transition hover:border-mystic-gold/40 hover:text-mystic-gold"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+              <div className="rounded-[24px] bg-white/70 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">
+                  Follow MysticVeda
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full border border-mystic-plum/10 bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-mystic-plum transition hover:border-mystic-gold/40 hover:text-mystic-gold"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="https://wa.me/919075137505" target="_blank" rel="noreferrer" className="primary-button">
+                WhatsApp
+              </a>
+              <Link to="/contact" className="secondary-button">
+                Contact Studio
+              </Link>
             </div>
           </div>
         </div>

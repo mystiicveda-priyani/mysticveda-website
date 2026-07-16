@@ -1,32 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mysticveda-holistic-studio.vercel.app/</loc>
+    <loc>https://mysticvedaholisticstudio.netlify.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mysticveda-holistic-studio.vercel.app/services</loc>
+    <loc>https://mysticvedaholisticstudio.netlify.app/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mysticveda-holistic-studio.vercel.app/numerology</loc>
+    <loc>https://mysticvedaholisticstudio.netlify.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mysticveda-holistic-studio.vercel.app/blog</loc>
+    <loc>https://mysticvedaholisticstudio.netlify.app/qualifications</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/terms-and-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/refund-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/cancellation-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/numerology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mysticvedaholisticstudio.netlify.app/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mysticveda-holistic-studio.vercel.app/login</loc>
+    <loc>https://mysticvedaholisticstudio.netlify.app/login</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://mysticveda-holistic-studio.vercel.app/signup</loc>
+    <loc>https://mysticvedaholisticstudio.netlify.app/signup</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -238,6 +238,20 @@ function BookingPage() {
         description="Choose your date and available time, confirm your details, and reserve your slot. Once booked, that time shows as unavailable to the next client."
       />
 
+      <div className="mt-8 grid gap-4 rounded-[32px] border border-mystic-plum/10 bg-white/80 p-4 shadow-card sm:grid-cols-4">
+        {[
+          "Choose Service",
+          "Choose Date",
+          "Payment",
+          "Confirmation"
+        ].map((step, index) => (
+          <div key={step} className="rounded-[24px] border border-mystic-plum/10 bg-white/70 p-4 text-center text-sm font-semibold text-mystic-plum">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-mystic-gold">Step {index + 1}</p>
+            <p className="mt-2">{step}</p>
+          </div>
+        ))}
+      </div>
+
       <div className="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <aside className="glass-panel h-fit rounded-[32px] p-8 shadow-aura">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mystic-gold">

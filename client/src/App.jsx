@@ -16,6 +16,15 @@ import ProfilePage from "./pages/ProfilePage";
 import ServicesPage from "./pages/ServicesPage";
 import NumerologyPage from "./pages/NumerologyPage";
 import SignupPage from "./pages/SignupPage";
+import AboutPage from "./pages/AboutPage";
+import QualificationsPage from "./pages/QualificationsPage";
+import FAQPage from "./pages/FAQPage";
+import ContactPage from "./pages/ContactPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
+import RefundPage from "./pages/RefundPage";
+import CancellationPage from "./pages/CancellationPage";
+import DisclaimerPage from "./pages/DisclaimerPage";
 
 function App() {
   return (
@@ -26,6 +35,15 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/qualifications" element={<QualificationsPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPage />} />
+          <Route path="/terms-and-conditions" element={<TermsPage />} />
+          <Route path="/refund-policy" element={<RefundPage />} />
+          <Route path="/cancellation-policy" element={<CancellationPage />} />
+          <Route path="/disclaimer" element={<DisclaimerPage />} />
           <Route path="/numerology" element={<NumerologyPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
