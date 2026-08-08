@@ -109,7 +109,7 @@ export async function sendBookingConfirmationEmail(appointment) {
         "This is a report booking, so no meeting link is required."
       ].join("\n");
   const html = requiresMeeting
-    ? `<p>Hello ${appointment.name},</p><p>Your MysticVeda booking is confirmed.</p><p><strong>Session:</strong> ${appointment.serviceName}<br /><strong>Services:</strong> ${serviceSummary}<br /><strong>Date:</strong> ${appointment.date}<br /><strong>Time:</strong> ${appointment.timeSlot}<br /><strong>Phone:</strong> ${appointment.phone}</p><p><strong>Google Meet link:</strong><br /><a href="${appointment.meetingLink}">${appointment.meetingLink}</a></p>`
+    ? `<p>Hello ${appointment.name},</p><p>Your MysticVeda booking is confirmed.</p><p><strong>Session:</strong> ${appointment.serviceName}<br /><strong>Services:</strong> ${serviceSummary}<br /><strong>Date:</strong> ${appointment.date}<br /><strong>Time:</strong> ${appointment.timeSlot}<br /><strong>Phone:</strong> ${appointment.phone}</p><p><strong>Meeting link:</strong><br /><a href="${appointment.meetingLink}">${appointment.meetingLink}</a></p>`
     : `<p>Hello ${appointment.name},</p><p>Your MysticVeda booking is confirmed.</p><p><strong>Session:</strong> ${appointment.serviceName}<br /><strong>Services:</strong> ${serviceSummary}<br /><strong>Preferred date:</strong> ${appointment.date}<br /><strong>Phone:</strong> ${appointment.phone}</p><p>This is a report booking, so no meeting link is required.</p>`;
 
   return deliverEmail({

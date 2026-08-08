@@ -62,9 +62,6 @@ function ContactPage() {
             <a href="https://wa.me/919075137505" target="_blank" rel="noreferrer" className="primary-button">
               WhatsApp Now
             </a>
-            <a href="https://calendar.google.com" target="_blank" rel="noreferrer" className="secondary-button">
-              Google Calendar Booking
-            </a>
           </div>
         </div>
 

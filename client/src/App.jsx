@@ -47,14 +47,7 @@ function App() {
           <Route path="/numerology" element={<NumerologyPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route
-            path="/custom-session"
-            element={
-              <ProtectedRoute allow={["user"]}>
-                <CustomSessionPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/custom-session" element={<CustomSessionPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route
@@ -65,14 +58,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/book/:serviceId"
-            element={
-              <ProtectedRoute allow={["user"]}>
-                <BookingPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/book/:serviceId" element={<BookingPage />} />
           <Route path="/confirmation/:bookingId" element={<ConfirmationPage />} />
           <Route path="/admin/login" element={<AdminLoginPage />} />
           <Route

@@ -34,14 +34,7 @@ function ProfilePage() {
   }, [appointments, user?.email]);
 
   function renderMeetingCard(appointment) {
-    const hasRealMeetingLink =
-      appointment.requiresMeeting !== false &&
-      appointment.meetingLink &&
-      appointment.meetingProvider === "google-meet";
-    const hasFallbackMeetingLink =
-      appointment.requiresMeeting !== false &&
-      appointment.meetingLink &&
-      appointment.meetingProvider !== "google-meet";
+    const hasMeetingLink = appointment.requiresMeeting !== false && appointment.meetingLink;
 
     if (appointment.requiresMeeting === false) {
       return (
@@ -52,7 +45,16 @@ function ProfilePage() {
       );
     }
 
-    if (hasRealMeetingLink) {
+    if (appointment.requiresMeeting === false) {
+      return (
+        <p className="mt-3 text-sm leading-7 text-white/85">
+          This report booking does not require a meeting link. Your report will be
+          emailed as a delivery-only booking.
+        </p>
+      );
+    }
+
+    if (hasMeetingLink) {
       return (
         <a
           href={appointment.meetingLink}
@@ -62,15 +64,6 @@ function ProfilePage() {
         >
           {appointment.meetingLink}
         </a>
-      );
-    }
-
-    if (hasFallbackMeetingLink) {
-      return (
-        <p className="mt-3 text-sm leading-7 text-white/85">
-          Google Meet is not connected yet for this booking, so no real Meet link
-          is available.
-        </p>
       );
     }
 

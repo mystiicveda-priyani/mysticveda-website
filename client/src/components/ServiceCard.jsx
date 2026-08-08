@@ -14,18 +14,42 @@ function ServiceCard({ service }) {
             ? "☁"
             : "☽";
 
-  const benefits =
+  const details =
     name.includes("tarot")
-      ? ["Intuitive insight", "Clarity for life decisions", "Gentle reflection"]
+      ? {
+          idealFor: "Best for clients seeking decision clarity in love, career, or life direction.",
+          challenge: "Supports reflection when you feel uncertain or emotionally stuck.",
+          expectation: "Expect intuitive insight, compassionate reflection, and practical next steps."
+        }
       : name.includes("healing") || name.includes("energy")
-        ? ["Energetic reset", "Emotional grounding", "Calm support"]
+        ? {
+            idealFor: "Best for clients who feel emotionally heavy, drained, or energetically blocked.",
+            challenge: "Helps release stress and restore calm when everything feels too full.",
+            expectation: "Expect a soothing, grounding experience with gentle energetic support."
+          }
         : name.includes("chakra")
-          ? ["Energy flow", "Inner balance", "Restorative support"]
+          ? {
+              idealFor: "Best for clients who want deeper energy alignment and emotional balance.",
+              challenge: "Supports those feeling disconnected from their body or inner rhythm.",
+              expectation: "Expect a restorative session focused on flow, grounding, and clarity."
+            }
           : name.includes("manifest")
-            ? ["Focused intention", "Goal clarity", "Practical next steps"]
+            ? {
+                idealFor: "Best for clients who are ready to create momentum and shape their next chapter.",
+                challenge: "Helps when motivation is low and priorities feel unclear.",
+                expectation: "Expect guided reflection, practical strategy, and renewed direction."
+              }
             : name.includes("numer")
-              ? ["Life pattern insight", "Personal direction", "Clear reflection"]
-              : ["Personalised guidance", "Private support", "Online access"];
+              ? {
+                  idealFor: "Best for clients who want insight into life patterns and personal growth.",
+                  challenge: "Supports reflection on repeating cycles and deeper purpose.",
+                  expectation: "Expect a thoughtful report with clear patterns and grounded guidance."
+                }
+              : {
+                  idealFor: "Best for clients seeking personal insight and a calm, premium experience.",
+                  challenge: "A thoughtful option when you want guidance without overwhelm.",
+                  expectation: "Expect clear guidance, caring support, and a personalised approach."
+                };
 
   return (
     <article className="group glass-panel flex h-full flex-col rounded-[28px] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-aura">
@@ -47,15 +71,19 @@ function ServiceCard({ service }) {
         {service.description}
       </p>
 
-      <div className="mt-5 rounded-[24px] border border-mystic-plum/10 bg-white/70 p-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-mystic-gold">
-          Benefits
-        </p>
-        <ul className="mt-3 space-y-2 text-sm text-mystic-plum/75">
-          {benefits.map((item) => (
-            <li key={item}>• {item}</li>
-          ))}
-        </ul>
+      <div className="mt-5 space-y-3 rounded-[24px] border border-mystic-plum/10 bg-white/70 p-4 text-sm text-mystic-plum/75">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-mystic-gold">Who it is for</p>
+          <p className="mt-2 leading-7">{details.idealFor}</p>
+        </div>
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-mystic-gold">What it helps with</p>
+          <p className="mt-2 leading-7">{details.challenge}</p>
+        </div>
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-mystic-gold">What to expect</p>
+          <p className="mt-2 leading-7">{details.expectation}</p>
+        </div>
       </div>
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm text-mystic-plum/60">
@@ -72,7 +100,7 @@ function ServiceCard({ service }) {
           Book Session
         </Link>
         <Link to="/contact" className="secondary-button">
-          Learn More
+          Ask a Question
         </Link>
       </div>
     </article>

@@ -1,25 +1,31 @@
 export const testimonials = [
   {
     name: "Durga Shete",
+    country: "India",
+    role: "Leadership Coach",
     quote:
       "MysticVeda helped me feel grounded again. The session felt personal, calming, and deeply restorative."
   },
   {
     name: "Ankeetaa Salagare",
+    country: "United Kingdom",
+    role: "Entrepreneur",
     quote:
       "I received clear, intuitive guidance along with practical insights that helped me move forward with confidence and direction."
   },
   {
     name: "Pradnya Chavan",
+    country: "Australia",
+    role: "Creative Director",
     quote:
       "From booking to follow-up, everything felt premium and intentional. The chakra balancing session was beautiful."
   }
 ];
 
 export const studioHighlights = [
-  "Private one-to-one energy sessions",
-  "Heart-led spiritual guidance",
-  "A safe, sacred space for healing and clarity"
+  "Private one-to-one sessions",
+  "Compassionate emotional support",
+  "Calm guidance for life transitions"
 ];
 
 export const timeSlots = [

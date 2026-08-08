@@ -62,20 +62,12 @@ export const api = {
             "Blend mindset support, energetic alignment, and practical strategy to call in your next chapter."
         },
         {
-          id: "numerology-report",
-          name: "Numerology Report",
-          type: "report",
-          duration: "Delivered by email",
+          id: "astrology-mini-session",
+          name: "Astrology Mini Session",
+          type: "live",
+          duration: "45 min",
           description:
-            "Receive a personalized numerology report covering your core numbers, life path insights, and energetic patterns. Your report will be emailed within 2 working days."
-        },
-        {
-          id: "astrology-report",
-          name: "Astrology Report",
-          type: "report",
-          duration: "Delivered by email",
-          description:
-            "Receive a personalized astrology report with birth chart insights, planetary influences, and practical guidance. Your report will be emailed within 2 working days."
+            "A focused astrology discussion to understand key transits and insights relevant to your present concerns."
         }
       ]
     });

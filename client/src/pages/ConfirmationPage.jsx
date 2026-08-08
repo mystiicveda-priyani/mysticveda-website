@@ -46,14 +46,7 @@ function ConfirmationPage() {
     );
   }
 
-  const hasRealMeetingLink =
-    appointment.requiresMeeting !== false &&
-    appointment.meetingLink &&
-    appointment.meetingProvider === "google-meet";
-  const hasFallbackMeetingLink =
-    appointment.requiresMeeting !== false &&
-    appointment.meetingLink &&
-    appointment.meetingProvider !== "google-meet";
+  const hasMeetingLink = appointment.requiresMeeting !== false && appointment.meetingLink;
   const hasRealEmail = appointment.emailStatus === "Sent (smtp)";
 
   return (
@@ -67,9 +60,7 @@ function ConfirmationPage() {
             Your slot has been reserved
           </h1>
           <p className="mt-4 text-base leading-7 text-mystic-plum/75">
-            Your booking details are saved successfully. Live sessions show a
-            real Google Meet link only after Google Calendar is connected, while
-            report sessions are scheduled for email delivery without a meeting link.
+            Your booking details are saved successfully. Live sessions include a meeting link when available; otherwise session details will be coordinated directly via WhatsApp or email.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -131,13 +122,9 @@ function ConfirmationPage() {
                 Meeting Link
               </p>
               <p className="mt-3 text-sm leading-7 text-white/85">
-                {hasRealMeetingLink
-                  ? "Your Google Meet link is ready."
-                  : hasFallbackMeetingLink
-                    ? "Google Meet is not connected yet, so this booking is still using a placeholder link."
-                    : "Meeting link is not available for this booking."}
+                {hasMeetingLink ? "A meeting link was provided with this booking." : "Meeting details will be coordinated via WhatsApp or email."}
               </p>
-              {hasRealMeetingLink ? (
+              {hasMeetingLink ? (
                 <a
                   href={appointment.meetingLink}
                   target="_blank"
@@ -146,12 +133,6 @@ function ConfirmationPage() {
                 >
                   {appointment.meetingLink}
                 </a>
-              ) : null}
-              {hasFallbackMeetingLink ? (
-                <div className="mt-4 rounded-2xl bg-white/10 px-4 py-3 text-sm text-white/85">
-                  Connect `mystiicveda@gmail.com` Google Calendar credentials in
-                  the backend to generate a real Meet link for future bookings.
-                </div>
               ) : null}
             </div>
           ) : (

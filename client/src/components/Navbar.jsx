@@ -7,21 +7,22 @@ function Navbar() {
   const { isAdmin, isUser, user, logout } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const primaryLinks = [
-    { label: "Home", to: "/" },
-    { label: "Services", to: "/services" },
-    { label: "About", to: "/about" },
-    { label: "Contact", to: "/contact" }
+  const visibleLinks = [
+    { label: "Home", to: "/", type: "route" },
+    { label: "Services", to: "/services", type: "route" },
+    { label: "About", to: "/about", type: "route" },
+    { label: "Contact", to: "/contact", type: "route" }
   ];
 
-  const overflowLinks = [
-    { label: "Qualifications", to: "/qualifications" },
-    { label: "FAQ", to: "/faq" },
-    { label: "Numerology", to: "/numerology" },
-    { label: "Blog", to: "/blog" }
+  const moreLinks = [
+    { label: "Programs", to: "#programs", type: "hash" },
+    { label: "Testimonials", to: "#testimonials", type: "hash" },
+    { label: "Blog", to: "/blog", type: "route" }
   ];
 
-  const mobileLinks = [...primaryLinks, ...overflowLinks];
+  const mobileLinks = [...visibleLinks, ...moreLinks];
+
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -49,83 +50,92 @@ function Navbar() {
           <div className="flex items-center gap-2 md:gap-3">
             <nav
               aria-label="Primary navigation"
-              className="hidden items-center gap-2 rounded-full border border-mystic-plum/10 bg-white/80 p-1 shadow-sm md:flex"
+              className="hidden items-center gap-3 rounded-full border border-mystic-plum/10 bg-white/80 p-1 shadow-sm md:flex"
             >
-              {primaryLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  className={({ isActive }) =>
-                    `rounded-full px-4 py-2 text-sm font-semibold transition ${
-                      isActive
-                        ? "bg-mystic-plum text-white shadow-md"
-                        : "text-mystic-plum hover:bg-mystic-plum/5"
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              ))}
-
-              <div className="relative">
-                <button
-                  type="button"
-                  onClick={() => setIsMenuOpen((open) => !open)}
-                  className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-mystic-plum transition hover:bg-mystic-plum/5"
-                  aria-expanded={isMenuOpen}
-                  aria-controls="more-navigation-menu"
-                  aria-label="Open more navigation links"
-                >
-                  <span>More</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className={`h-4 w-4 transition-transform ${isMenuOpen ? "rotate-180" : "rotate-0"}`}
-                  >
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </button>
-
-                <div
-                  id="more-navigation-menu"
-                  role="menu"
-                  aria-label="Additional pages"
-                  aria-hidden={!isMenuOpen}
-                  className={`absolute right-0 top-full mt-3 w-56 overflow-hidden rounded-[24px] border border-mystic-plum/10 bg-white/95 p-2 shadow-2xl backdrop-blur-xl transition-all duration-300 ${
-                    isMenuOpen
-                      ? "pointer-events-auto translate-y-0 opacity-100"
-                      : "pointer-events-none -translate-y-2 opacity-0"
-                  }`}
-                >
-                  {overflowLinks.map((link) => (
+              {visibleLinks.map((link) => (
+                <div key={link.to}>
+                  {link.type === "route" ? (
                     <NavLink
-                      key={link.to}
                       to={link.to}
                       onClick={handleNavSelect}
                       className={({ isActive }) =>
-                        `block rounded-2xl px-3 py-2.5 text-sm font-semibold transition ${
+                        `rounded-full px-4 py-2 text-sm font-semibold transition ${
                           isActive
-                            ? "bg-mystic-plum text-white shadow-sm"
+                            ? "bg-mystic-plum text-white shadow-md"
                             : "text-mystic-plum hover:bg-mystic-plum/5"
                         }`
                       }
                     >
                       {link.label}
                     </NavLink>
-                  ))}
+                  ) : (
+                    <a
+                      href={link.to}
+                      onClick={handleNavSelect}
+                      className="rounded-full px-4 py-2 text-sm font-semibold text-mystic-plum transition hover:bg-mystic-plum/5"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </div>
+              ))}
+
+              <div
+                className="relative"
+                onMouseEnter={() => setIsMoreOpen(true)}
+                onMouseLeave={() => setIsMoreOpen(false)}
+              >
+                <button
+                  type="button"
+                  onClick={() => setIsMoreOpen((v) => !v)}
+                  className="rounded-full px-4 py-2 text-sm font-semibold text-mystic-plum inline-flex items-center gap-2 hover:bg-mystic-plum/5"
+                  aria-expanded={isMoreOpen}
+                  aria-haspopup="menu"
+                >
+                  More
+                  <svg className="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                    <path d="M6 8l4 4 4-4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+
+                {isMoreOpen ? (
+                  <div className="absolute right-0 mt-2 w-48 rounded-xl border border-mystic-plum/10 bg-white/90 shadow-md">
+                    <nav className="flex flex-col p-2">
+                      {moreLinks.map((link) => (
+                        link.type === "route" ? (
+                          <NavLink
+                            key={link.to}
+                            to={link.to}
+                            onClick={handleNavSelect}
+                            className="rounded-2xl px-4 py-3 text-sm font-semibold text-mystic-plum hover:bg-mystic-plum/5"
+                          >
+                            {link.label}
+                          </NavLink>
+                        ) : (
+                          <a
+                            key={link.to}
+                            href={link.to}
+                            onClick={handleNavSelect}
+                            className="rounded-2xl px-4 py-3 text-sm font-semibold text-mystic-plum hover:bg-mystic-plum/5"
+                          >
+                            {link.label}
+                          </a>
+                        )
+                      ))}
+                    </nav>
+                  </div>
+                ) : null}
               </div>
             </nav>
 
             <div className="hidden items-center gap-3 md:flex">
-              <NavLink to="/contact" className="primary-button" onClick={handleNavSelect}>
+              <a
+                href="https://wa.me/919075137505?text=Hi%20MysticVeda%2C%20I%27d%20like%20to%20book%20a%20session."
+                className="primary-button"
+                onClick={handleNavSelect}
+              >
                 Book a Session
-              </NavLink>
+              </a>
               {isUser ? (
                 <div className="rounded-full border border-mystic-plum/10 bg-white/80 px-4 py-2 text-sm font-semibold text-mystic-plum">
                   {user?.name}
@@ -139,9 +149,13 @@ function Navbar() {
             </div>
 
             <div className="flex items-center gap-2 md:hidden">
-              <NavLink to="/contact" className="primary-button px-4 py-2.5" onClick={handleNavSelect}>
+              <a
+                href="https://wa.me/919075137505?text=Hi%20MysticVeda%2C%20I%27d%20like%20to%20book%20a%20session."
+                className="primary-button px-4 py-2.5"
+                onClick={handleNavSelect}
+              >
                 Book a Session
-              </NavLink>
+              </a>
               <button
                 type="button"
                 onClick={() => setIsMenuOpen((open) => !open)}
@@ -174,26 +188,37 @@ function Navbar() {
           aria-label="Mobile navigation"
           aria-hidden={!isMenuOpen}
           className={`mt-3 overflow-hidden rounded-[28px] border border-mystic-plum/10 bg-white/90 shadow-xl transition-all duration-300 md:hidden ${
-            isMenuOpen ? "max-h-[34rem] opacity-100" : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-[38rem] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="p-3">
             <nav className="flex flex-col gap-1">
               {mobileLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  onClick={handleNavSelect}
-                  className={({ isActive }) =>
-                    `rounded-2xl px-4 py-3 text-sm font-semibold transition ${
-                      isActive
-                        ? "bg-mystic-plum text-white shadow-sm"
-                        : "text-mystic-plum hover:bg-mystic-plum/5"
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
+                <div key={link.to}>
+                  {link.type === "route" ? (
+                    <NavLink
+                      to={link.to}
+                      onClick={handleNavSelect}
+                      className={({ isActive }) =>
+                        `rounded-2xl px-4 py-3 text-sm font-semibold transition ${
+                          isActive
+                            ? "bg-mystic-plum text-white shadow-sm"
+                            : "text-mystic-plum hover:bg-mystic-plum/5"
+                        }`
+                      }
+                    >
+                      {link.label}
+                    </NavLink>
+                  ) : (
+                    <a
+                      href={link.to}
+                      onClick={handleNavSelect}
+                      className="block rounded-2xl px-4 py-3 text-sm font-semibold text-mystic-plum transition hover:bg-mystic-plum/5"
+                    >
+                      {link.label}
+                    </a>
+                  )}
+                </div>
               ))}
 
               {(isAdmin || isUser) && (

@@ -277,9 +277,7 @@ function AdminPage() {
                       </div>
                     </td>
                     <td className="px-5 py-4 text-mystic-plum/75">
-                      {appointment.requiresMeeting !== false &&
-                      appointment.meetingLink &&
-                      appointment.meetingProvider === "google-meet" ? (
+                      {appointment.requiresMeeting !== false && appointment.meetingLink ? (
                         <a
                           href={appointment.meetingLink}
                           target="_blank"
@@ -288,15 +286,10 @@ function AdminPage() {
                         >
                           Open Link
                         </a>
-                      ) : appointment.requiresMeeting !== false &&
-                        appointment.meetingProvider === "fallback" ? (
-                        <span className="text-xs text-amber-700">
-                          Placeholder only
-                        </span>
+                      ) : appointment.requiresMeeting !== false && appointment.meetingProvider === "fallback" ? (
+                        <span className="text-xs text-amber-700">Placeholder only</span>
                       ) : (
-                        <span className="text-xs text-mystic-plum/55">
-                          No meeting link
-                        </span>
+                        <span className="text-xs text-mystic-plum/55">No meeting link</span>
                       )}
                     </td>
                   </tr>
